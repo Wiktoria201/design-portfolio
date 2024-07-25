@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 80%;
+  padding: 20px;
+}
+
+.carousel-item {
+  min-width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+.carousel-item:target {
+  transform: scale(1.5);
+  width: 150px;
+  height: 150px;
+}
